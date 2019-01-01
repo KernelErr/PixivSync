@@ -147,6 +147,7 @@ def get_following(aapi,following):
     for user in following:
         userinfo = aapi.user_detail(user)
         username = userinfo.user.name
+        username = str(username).split("/")[0]
         filename = './outputs/' + str(username)
         urls = get_user(aapi,user)
         if not os.path.exists(filename + '.txt'):
