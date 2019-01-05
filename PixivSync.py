@@ -123,7 +123,7 @@ def get_daily_rank(aapi):
     json_result = json_result.illusts
     ids = []
     urls = []
-    for number in range(0,9):
+    for number in range(0,10):
         ids.append(json_result[number].id)
     for each in ids:
         illust = aapi.illust_detail(each)
